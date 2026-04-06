@@ -10,6 +10,10 @@ B站：https://space.bilibili.com/385085361
 
 youtube:https://www.youtube.com/@T8star-Aix
 
+注意:gemma4需要至少llama-cpp-python依赖0.3.35版本
+
+Cu128和Cu130的轮子：https://github.com/JamePeng/llama-cpp-python
+
 ## Installation  
 
 #### Install the node:  
