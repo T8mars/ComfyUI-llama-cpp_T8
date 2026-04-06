@@ -1,0 +1,627 @@
+{
+  "id": "3448f99c-d255-48da-8a20-f9da7dc34d41",
+  "revision": 0,
+  "last_node_id": 9,
+  "last_link_id": 9,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "llama_cpp_parameters",
+      "pos": [
+        491.41973876953125,
+        517.5353393554688
+      ],
+      "size": [
+        368.0517578125,
+        346
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "max_tokens",
+          "name": "max_tokens",
+          "type": "INT",
+          "widget": {
+            "name": "max_tokens"
+          }
+        },
+        {
+          "label": "top_k",
+          "name": "top_k",
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          }
+        },
+        {
+          "label": "top_p",
+          "name": "top_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "top_p"
+          }
+        },
+        {
+          "label": "min_p",
+          "name": "min_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "min_p"
+          }
+        },
+        {
+          "label": "typical_p",
+          "name": "typical_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "typical_p"
+          }
+        },
+        {
+          "label": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          }
+        },
+        {
+          "label": "repeat_penalty",
+          "name": "repeat_penalty",
+          "type": "FLOAT",
+          "widget": {
+            "name": "repeat_penalty"
+          }
+        },
+        {
+          "label": "frequency_penalty",
+          "name": "frequency_penalty",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frequency_penalty"
+          }
+        },
+        {
+          "label": "presence_penalty",
+          "name": "presence_penalty",
+          "type": "FLOAT",
+          "widget": {
+            "name": "presence_penalty"
+          }
+        },
+        {
+          "label": "mirostat_mode",
+          "name": "mirostat_mode",
+          "type": "INT",
+          "widget": {
+            "name": "mirostat_mode"
+          }
+        },
+        {
+          "label": "mirostat_eta",
+          "name": "mirostat_eta",
+          "type": "FLOAT",
+          "widget": {
+            "name": "mirostat_eta"
+          }
+        },
+        {
+          "label": "mirostat_tau",
+          "name": "mirostat_tau",
+          "type": "FLOAT",
+          "widget": {
+            "name": "mirostat_tau"
+          }
+        },
+        {
+          "label": "state_uid",
+          "name": "state_uid",
+          "type": "INT",
+          "widget": {
+            "name": "state_uid"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "parameters",
+          "name": "parameters",
+          "type": "LLAMACPPARAMS",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "llama-cpp_vllm",
+        "ver": "2d28817e12f912ec9e27ce83cf7610a477152185",
+        "Node name for S&R": "llama_cpp_parameters",
+        "aux_id": "lihaoyun6/ComfyUI-llama-cpp_vlm",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        1024,
+        30,
+        0.9,
+        0.05,
+        1,
+        0.8,
+        1,
+        0,
+        1,
+        0,
+        0.1,
+        5,
+        -1
+      ]
+    },
+    {
+      "id": 6,
+      "type": "PreviewAny",
+      "pos": [
+        1664.4060705105685,
+        153.29293788751957
+      ],
+      "size": [
+        422.9677429199219,
+        610.8729858398438
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "source",
+          "name": "source",
+          "type": "*",
+          "link": 9
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.0",
+        "Node name for S&R": "PreviewAny",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 9,
+      "type": "easy cleanGpuUsed",
+      "pos": [
+        1380.6937050852614,
+        326.2036593619663
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "337a03bb19273ee084e56b16a59ad35cb07a1a04",
+        "Node name for S&R": "easy cleanGpuUsed"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 2,
+      "type": "llama_cpp_model_loader",
+      "pos": [
+        464.5234434362728,
+        251.0691842490447
+      ],
+      "size": [
+        356.9138488769531,
+        202
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "COMBO",
+          "widget": {
+            "name": "model"
+          }
+        },
+        {
+          "label": "mmproj",
+          "name": "mmproj",
+          "type": "COMBO",
+          "widget": {
+            "name": "mmproj"
+          }
+        },
+        {
+          "label": "chat_handler",
+          "name": "chat_handler",
+          "type": "COMBO",
+          "widget": {
+            "name": "chat_handler"
+          }
+        },
+        {
+          "label": "n_ctx",
+          "name": "n_ctx",
+          "type": "INT",
+          "widget": {
+            "name": "n_ctx"
+          }
+        },
+        {
+          "label": "vram_limit",
+          "name": "vram_limit",
+          "type": "INT",
+          "widget": {
+            "name": "vram_limit"
+          }
+        },
+        {
+          "label": "image_min_tokens",
+          "name": "image_min_tokens",
+          "type": "INT",
+          "widget": {
+            "name": "image_min_tokens"
+          }
+        },
+        {
+          "label": "image_max_tokens",
+          "name": "image_max_tokens",
+          "type": "INT",
+          "widget": {
+            "name": "image_max_tokens"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "llama_model",
+          "name": "llama_model",
+          "type": "LLAMACPPMODEL",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "llama-cpp_vllm",
+        "ver": "2d28817e12f912ec9e27ce83cf7610a477152185",
+        "Node name for S&R": "llama_cpp_model_loader",
+        "aux_id": "lihaoyun6/ComfyUI-llama-cpp_vlm",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "gemma-4\\gemma-4-26b-a4b-it-heretic.q3_k_s.gguf",
+        "gemma-4\\gemma-4-26B-A4B-it-heretic-mmproj.q8_0.gguf",
+        "Gemma4",
+        8192,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [
+        -1.4573318969945817,
+        249.62671746239965
+      ],
+      "size": [
+        354.32269287109375,
+        600.697021484375
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          }
+        },
+        {
+          "label": "upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        },
+        {
+          "label": "MASK",
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.0",
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ComfyUI_00001_lhqtr_1760524182.png",
+        "image"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "llama_cpp_instruct_adv",
+      "pos": [
+        906.62939453125,
+        256.4734802246094
+      ],
+      "size": [
+        400,
+        394
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "llama_model",
+          "name": "llama_model",
+          "type": "LLAMACPPMODEL",
+          "link": 1
+        },
+        {
+          "label": "parameters",
+          "name": "parameters",
+          "shape": 7,
+          "type": "LLAMACPPARAMS",
+          "link": 2
+        },
+        {
+          "label": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "label": "queue_handler",
+          "name": "queue_handler",
+          "shape": 7,
+          "type": "*"
+        },
+        {
+          "label": "preset_prompt",
+          "name": "preset_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "preset_prompt"
+          }
+        },
+        {
+          "label": "custom_prompt",
+          "name": "custom_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "custom_prompt"
+          }
+        },
+        {
+          "label": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          }
+        },
+        {
+          "label": "inference_mode",
+          "name": "inference_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "inference_mode"
+          }
+        },
+        {
+          "label": "max_frames",
+          "name": "max_frames",
+          "type": "INT",
+          "widget": {
+            "name": "max_frames"
+          }
+        },
+        {
+          "label": "max_size",
+          "name": "max_size",
+          "type": "INT",
+          "widget": {
+            "name": "max_size"
+          }
+        },
+        {
+          "label": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          }
+        },
+        {
+          "label": "force_offload",
+          "name": "force_offload",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "force_offload"
+          }
+        },
+        {
+          "label": "save_states",
+          "name": "save_states",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_states"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "output",
+          "name": "output",
+          "type": "STRING",
+          "links": [
+            8
+          ]
+        },
+        {
+          "label": "output_list",
+          "name": "output_list",
+          "shape": 6,
+          "type": "STRING"
+        },
+        {
+          "label": "state_uid",
+          "name": "state_uid",
+          "type": "INT"
+        }
+      ],
+      "properties": {
+        "cnr_id": "llama-cpp_vllm",
+        "ver": "2d28817e12f912ec9e27ce83cf7610a477152185",
+        "Node name for S&R": "llama_cpp_instruct_adv",
+        "aux_id": "lihaoyun6/ComfyUI-llama-cpp_vlm",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Empty - Nothing",
+        "描述这张图片，用中文",
+        "描述这张图片，用中文",
+        "one by one",
+        24,
+        256,
+        1056494058960715,
+        "randomize",
+        false,
+        false
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "LLAMACPPMODEL"
+    ],
+    [
+      2,
+      3,
+      0,
+      1,
+      1,
+      "LLAMACPPARAMS"
+    ],
+    [
+      3,
+      4,
+      0,
+      1,
+      2,
+      "IMAGE"
+    ],
+    [
+      8,
+      1,
+      0,
+      9,
+      0,
+      "STRING"
+    ],
+    [
+      9,
+      9,
+      0,
+      6,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "B站，Youtube：T8star-Aix",
+      "bounding": [
+        11.696787519217418,
+        -491.1311969598162,
+        2836.3853410134325,
+        427.2743968611727
+      ],
+      "color": "#3f789e",
+      "font_size": 240,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "links_added_by_ue": [],
+    "ue_links": [],
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "ds": {
+      "scale": 0.876922695000007,
+      "offset": [
+        188.89599184610688,
+        298.7289280516901
+      ]
+    },
+    "frontendVersion": "1.41.21",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
