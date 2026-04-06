@@ -1,16 +1,21 @@
-# ComfyUI-llama-cpp  
-Run LLM/VLM models natively in ComfyUI based on llama.cpp  
-**[[📃中文版](./README_zh.md)]** 
+# ComfyUI-llama-cpp-T8
 
-## Preview  
-![](./img/preview.jpg)
+2026.04.06更新
+
+支持gemma 4
+
+模型：https://huggingface.co/nohurry/gemma-4-26B-A4B-it-heretic-GUFF/tree/main
+
+B站：https://space.bilibili.com/385085361
+
+youtube:https://www.youtube.com/@T8star-Aix
 
 ## Installation  
 
 #### Install the node:  
 ```bash
 cd ComfyUI/custom_nodes
-git clone https://github.com/lihaoyun6/ComfyUI-llama-cpp.git
+git clone git clone https://github.com/T8mars/ComfyUI-llama-cpp_T8.git
 python -m pip install -r ComfyUI-llama-cpp/requirements.txt
 ```
 
